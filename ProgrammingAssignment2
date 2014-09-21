@@ -1,3 +1,11 @@
+## The functions below work together to take a specific matrix and create and store an
+## inverse of that matrix in the global environment. The inverse of this matrix can be
+## called at anytime when division by that matrix is required. The functions assume
+## specific matrix is square and invertable
+## 
+
+## run to initialize a place holder for the inverse of the matrix
+
 makeCacheMatrix <- function(x = matrix()) {
      
       inv <- NULL
@@ -15,6 +23,8 @@ makeCacheMatrix <- function(x = matrix()) {
              getinv = getinv)
       
 }
+## use this function invert the specific matrix (solve) and store the results
+## into the global inverted matrix variable. 
 
 cacheSolve <- function(x, ...) {
         inv <- x$getinv()
